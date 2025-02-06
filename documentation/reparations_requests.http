@@ -1,0 +1,15 @@
+### Create a new reparation
+POST http://localhost:1992/api/reparations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoibmV3VXNlciIsIm1vdGRlcGFzc2UiOiIkMmIkMTAkM0RwU3BEc0RMaWVVWGQvNkh2WjNvLnFOUGpaV3hKbFVIMk4wUmN0cmxKd1lWZGppeTVVdTYiLCJpYXQiOjE3Mzg4NDk0OTN9.YDEgeC8wIwvYjOF5CWa7TyhtDLyMBVHAERRM8tYx_Dw
+
+{
+    "nom": "tryErrorMessage",
+    "prix": 25,
+    "instrument": 2
+}
+
+### Delete all reparation
+DELETE http://localhost:1992/api/reparations/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoibmV3VXNlciIsIm1vdGRlcGFzc2UiOiIkMmIkMTAkM0RwU3BEc0RMaWVVWGQvNkh2WjNvLnFOUGpaV3hKbFVIMk4wUmN0cmxKd1lWZGppeTVVdTYiLCJpYXQiOjE3Mzg4NDk0OTN9.YDEgeC8wIwvYjOF5CWa7TyhtDLyMBVHAERRM8tYx_Dw

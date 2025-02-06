@@ -1,0 +1,37 @@
+### Create an instrument
+POST http://localhost:1992/api/instruments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoibmV3VXNlciIsIm1vdGRlcGFzc2UiOiIkMmIkMTAkM0RwU3BEc0RMaWVVWGQvNkh2WjNvLnFOUGpaV3hKbFVIMk4wUmN0cmxKd1lWZGppeTVVdTYiLCJpYXQiOjE3Mzg4NDk0OTN9.YDEgeC8wIwvYjOF5CWa7TyhtDLyMBVHAERRM8tYx_Dw
+
+{
+    "poids": 0.5,
+    "nom": "bananes",
+    "couleur": "jaune",
+    "prix": 2.5,
+    "reparation": ""
+}
+
+### Get all instruments
+GET http://localhost:1992/api/instruments
+
+### Get an instrument by it's id
+GET   http://localhost:1992/api/instruments/4
+
+### Update an instrument by it's id
+PUT    http://localhost:1992/api/instruments/5
+Content-Type: application/json
+
+{
+    "poids": 100,
+    "nom": "piano",
+    "couleur": "rouge",
+    "prix": 2000,
+    "reparation": ""
+}
+
+### Delete an instrument by it's id
+DELETE   http://localhost:1992/api/instruments/6
+
+# ### Again with the yellow bananas (weird but not judging) 
+# GET   http://localhost:1992/api/instruments/bananes?couleur=jaune
+# Yup didn't get the yellow bananas
