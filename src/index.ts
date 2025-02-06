@@ -5,6 +5,7 @@ import "dotenv/config";
 import { instrumentRouter } from "./router/instruments";
 import { reparationRouter } from "./router/reparations";
 import { userRouter } from "./router/users";
+import { checkToken } from "./middleware/checkToken";
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(express.json());
 
 const apiRouter = express.Router();
 apiRouter.use("/instruments", instrumentRouter);
-apiRouter.use("/reparations", reparationRouter);
+apiRouter.use("/reparations", checkToken, reparationRouter);
 apiRouter.use("/users", userRouter);
 
 app.use("/api", apiRouter);
